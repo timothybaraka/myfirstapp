@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.cart) Button mCartButton;
     @BindView(R.id.home) Button mHomeButton;
     @BindView(R.id.search) EditText mSearch;
+    @BindView(R.id.search_button) Button mSearch_Button;
 //    private Button mShopButton;
 //    private Button mCartButton;
 //    private Button mHomeButton;
@@ -27,14 +28,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        mSearch_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String searches = mSearch.getText().toString();
+                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+                intent.putExtra("searches", searches);
+                startActivity(intent);
+            }
+        });
+
+
         mShopButton = (Button) findViewById(R.id.shop);
         mShopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String search = mSearch.getText().toString();
+
                 Intent intent = new Intent(MainActivity.this, ShopActivity.class);
 
-                intent.putExtra("search", search);
                 startActivity(intent);
             }
         });
