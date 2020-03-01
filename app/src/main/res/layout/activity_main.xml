@@ -12,6 +12,13 @@
         android:id="@+id/header"
         android:text="MyRestaurants"/>
 
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sell" />
+
 
     <EditText
         android:layout_width="match_parent"
