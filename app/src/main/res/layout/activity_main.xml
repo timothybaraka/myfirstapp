@@ -7,8 +7,32 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="15dp"
+        android:padding="15dp"
+        android:id="@+id/header"
         android:text="MyRestaurants"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:background="#64FFDA"
+        android:layout_below="@+id/header"
+        android:paddingTop="60dp"
+        android:padding="5dp"
+        android:hint="search for anything"
+        android:layout_centerHorizontal="true" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        androi/>
+
+
+
+
+
+
 
 
     <Button
@@ -24,7 +48,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
         android:text="SHOP" />
+    <Button
+        android:id="@+id/cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="CART" />
 
 </RelativeLayout>
