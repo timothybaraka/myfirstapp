@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/sell" />
+        android:src="@drawable/sell1" />
 
 
     <EditText
@@ -37,7 +37,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/search" />
+        android:layout_below="@id/searchButton" />
 
 
 </LinearLayout>
