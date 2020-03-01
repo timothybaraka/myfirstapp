@@ -12,16 +12,18 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-//    @BindView(R.id.shop) Button mShopButton;
-    private Button mShopButton;
-    private Button mCartButton;
-    private Button mHomeButton;
+    @BindView(R.id.shop) Button mShopButton;
+    @BindView(R.id.cart) Button mCartButton;
+    @BindView(R.id.home) Button mHomeButton;
+//    private Button mShopButton;
+//    private Button mCartButton;
+//    private Button mHomeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        ButterKnife.bind(this);
+        ButterKnife.bind(this);
 
         mShopButton = (Button) findViewById(R.id.shop);
         mShopButton.setOnClickListener(new View.OnClickListener() {
