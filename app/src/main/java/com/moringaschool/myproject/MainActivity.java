@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         mCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"caaaaaart", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, CartActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Homeeeee", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
             }
         });
     }
