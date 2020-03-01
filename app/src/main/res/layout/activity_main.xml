@@ -12,6 +12,7 @@
         android:id="@+id/header"
         android:text="MyRestaurants"/>
 
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,18 +23,17 @@
         android:padding="5dp"
         android:hint="search for anything"
         android:layout_centerHorizontal="true" />
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/header"
-        androi/>
+        android:layout_below="@id/search" />
 
 
-
-
-
-
-
+</LinearLayout>
 
     <Button
         android:id="@+id/home"
