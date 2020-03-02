@@ -11,7 +11,7 @@ import android.widget.EditText;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     @BindView(R.id.shop) Button mShopButton;
     @BindView(R.id.cart) Button mCartButton;
     @BindView(R.id.home) Button mHomeButton;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String searches = mSearch.getText().toString();
-                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+                Intent intent = new Intent(HomeActivity.this, ShopActivity.class);
                 intent.putExtra("searches", searches);
                 startActivity(intent);
             }
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+                Intent intent = new Intent(HomeActivity.this, ShopActivity.class);
 
                 startActivity(intent);
             }
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CartActivity.class);
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
                 startActivity(intent);
             }
         });
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         mHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
             }
         });
     }

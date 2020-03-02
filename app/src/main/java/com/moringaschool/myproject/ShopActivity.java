@@ -2,6 +2,7 @@ package com.moringaschool.myproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,4 +31,9 @@ public class ShopActivity extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, items);
         mShopView.setAdapter(adapter);
     }
+//    Intent intent = getIntent();
+//    String location = intent.getStringExtra("searches");
+//
+//        mShopView.setText("Here are all the restaurants near: " + searches);
 }
+
