@@ -12,11 +12,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.shop) Button mShopButton;
-    @BindView(R.id.cart) Button mCartButton;
-    @BindView(R.id.home) Button mHomeButton;
-    @BindView(R.id.search) EditText mSearch;
-    @BindView(R.id.search_button) Button mSearch_Button;
+
+    @BindView(R.id.loginbutton) Button mLoginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,43 +21,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mSearch_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String searches = mSearch.getText().toString();
-                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
-                intent.putExtra("searches", searches);
-                startActivity(intent);
-            }
-        });
 
-        mShopButton = (Button) findViewById(R.id.shop);
-        mShopButton.setOnClickListener(new View.OnClickListener() {
+        mLoginButton = (Button) findViewById(R.id.loginbutton);
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
 
                 startActivity(intent);
             }
         });
 
-        mCartButton = (Button) findViewById(R.id.cart);
-        mCartButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CartActivity.class);
-                startActivity(intent);
-            }
-        });
 
-        mHomeButton = (Button) findViewById(R.id.home);
-        mHomeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-            }
-        });
+
     }
 }
 
