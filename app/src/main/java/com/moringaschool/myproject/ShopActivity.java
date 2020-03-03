@@ -26,7 +26,7 @@ public class ShopActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
         ButterKnife.bind(this);
-        mShopView = (ListView) findViewById(R.id.shopView);
+//        mShopView = (ListView) findViewById(R.id.shopView);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, items);
         mShopView.setAdapter(adapter);

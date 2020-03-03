@@ -65,7 +65,6 @@
         android:layout_marginBottom="168dp"
         android:background="#42A5F5"
         android:text="Login"
-        android:shadowRadius="25dp"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="488dp" />
 
