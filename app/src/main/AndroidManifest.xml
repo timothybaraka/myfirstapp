@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".BuyActivity"></activity>
+        <activity android:name=".HomeActivity" />
         <activity android:name=".CartActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.myproject.MainActivity"></meta-data>
+                android:value="com.moringaschool.myproject.MainActivity" />
         </activity>
         <activity android:name=".ShopActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.myproject.MainActivity"></meta-data>
+                android:value="com.moringaschool.myproject.MainActivity" />
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

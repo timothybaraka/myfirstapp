@@ -25,24 +25,51 @@ public class HomeActivity extends AppCompatActivity {
     EditText mSearch;
     @BindView(R.id.search_button)
     Button mSearch_Button;
-//    @BindView(R.id.userView)
-//    EditText mUserView;
-@BindView(R.id.userView)
- TextView mUserView;
-//private TextView mUserView;
+    @BindView(R.id.userView)
+    TextView mUserView;
+
 
 @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        ButterKnife.bind(this);
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_home);
+    ButterKnife.bind(this);
 
         Intent intent = getIntent();
         String username = intent.getStringExtra("username");
     mUserView.setText("Welcome " + username);
 
-    }
+
+    mShopButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(HomeActivity.this, "Hello World!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+            startActivity(intent);
+        }
+    });
+
+
+    mCartButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(HomeActivity.this, "Hello World!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+            startActivity(intent);
+        }
+    });
+
+    mSearch_Button = (Button) findViewById(R.id.search_button);
+    mSearch_Button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+            startActivity(intent);
+        }
+    });
 }
+}
+
 
 
 

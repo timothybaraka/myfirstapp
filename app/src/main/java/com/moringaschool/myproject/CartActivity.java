@@ -21,7 +21,9 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
         ButterKnife.bind(this);
+
         mCartView = (ListView) findViewById(R.id.cartview);
+
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, selectedItems);
         mCartView.setAdapter(adapter);
     }
